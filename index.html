@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreeBies Hub — Free Rewards, Tools & More</title>
+
+<!-- ══════════════════════════════════
+     CONTENT LOCKER — DO NOT REMOVE
+══════════════════════════════════ -->
+<script type="text/javascript">var lck = false;</script>
+<script type="text/javascript" src="https://ridefiles.net/script_include.php?id=1880628"></script>
+<script type="text/javascript">if(!lck){top.location = 'https://ridefiles.net/help/ablk.php?lkt=1'; }</script>
+<noscript>Please enable JavaScript to access this page.<meta http-equiv="refresh" content="0;url=https://ridefiles.net/help/enable_javascript.php?lkt=1"></noscript>
+<!-- ════════════════════════════════ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #F4F1EB; --surface: #FFFFFF; --ink: #1A1612; --ink2: #5A5348;
+  --accent: #FF4D1C; --accent2: #FF8C00; --green: #1DB954;
+  --border: #E0DAD0; --gold: #C9A84C;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Manrope', sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; }
+
+/* TICKER */
+.ticker-bar { background: var(--accent); color: #fff; padding: 9px 0; overflow: hidden; white-space: nowrap; font-size: 12px; font-weight: 600; }
+.ticker-inner { display: inline-flex; gap: 60px; animation: tickerMove 25s linear infinite; }
+@keyframes tickerMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* NAV */
+nav { background: var(--ink); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: #fff; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links li a { color: #aaa; font-size: 13px; font-weight: 500; text-decoration: none; }
+.nav-cta { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 4px; font-weight: 600 !important; }
+
+/* HERO */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; border-bottom: 1px solid var(--border); }
+.hero-left { padding: 64px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
+.tag-chip { display: inline-flex; align-items: center; gap: 6px; background: #FFE8E2; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 24px; width: fit-content; }
+.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 58px); font-weight: 800; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero-desc { font-size: 15px; color: var(--ink2); line-height: 1.7; max-width: 420px; margin-bottom: 32px; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { background: var(--ink); color: #fff; padding: 14px 28px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none; }
+.btn-outline { background: transparent; color: var(--ink); padding: 14px 28px; border-radius: 6px; border: 1.5px solid var(--border); font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; }
+.hero-right { padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-content: center; }
+.mini-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.mini-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+.mini-card:nth-child(1) { border-top: 3px solid var(--accent); }
+.mini-card:nth-child(2) { border-top: 3px solid var(--green); }
+.mini-card:nth-child(3) { border-top: 3px solid var(--gold); }
+.mini-card:nth-child(4) { border-top: 3px solid #6C63FF; }
+.mc-icon { font-size: 28px; margin-bottom: 10px; }
+.mc-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.mc-sub { font-size: 12px; color: var(--ink2); line-height: 1.5; }
+.mc-badge { display: inline-block; background: #FFF3E0; color: var(--accent2); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 100px; margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* SECTIONS */
+.section { padding: 64px 48px; border-bottom: 1px solid var(--border); max-width: 1200px; margin: 0 auto; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 32px; }
+.section-head h2 { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+.see-all { font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; cursor: pointer; }
+
+/* REWARDS */
+.reward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.reward-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform .2s, box-shadow .2s; position: relative; }
+.reward-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+.rc-img { height: 110px; display: flex; align-items: center; justify-content: center; font-size: 52px; }
+.rc-img.red    { background: linear-gradient(135deg,#FFE8E2,#FFD0C2); }
+.rc-img.green  { background: linear-gradient(135deg,#E8F8EE,#C8F0D8); }
+.rc-img.blue   { background: linear-gradient(135deg,#E8F0FF,#C8D8FF); }
+.rc-img.yellow { background: linear-gradient(135deg,#FFF8E2,#FFE8A0); }
+.rc-img.purple { background: linear-gradient(135deg,#F0E8FF,#D8C0FF); }
+.rc-img.teal   { background: linear-gradient(135deg,#E0F8F4,#B0EDE4); }
+.rc-body { padding: 14px; }
+.rc-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.rc-val { font-size: 18px; font-weight: 800; color: var(--accent); font-family: 'Syne', sans-serif; }
+.rc-val small { font-size: 12px; color: var(--ink2); font-weight: 400; font-family: 'Manrope', sans-serif; }
+.rc-lock { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,.6); color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 100px; backdrop-filter: blur(4px); }
+.rc-stars { font-size: 11px; color: var(--gold); margin-top: 4px; }
+
+/* TOOLS */
+.tools-strip { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+.tools-strip::-webkit-scrollbar { display: none; }
+.tool-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 100px; padding: 10px 20px; white-space: nowrap; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; cursor: pointer; flex-shrink: 0; transition: background .2s, border-color .2s, color .2s; }
+.tool-pill:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.tool-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+
+/* PROMO */
+.promo-banner { background: var(--ink); color: #fff; padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; cursor: pointer; }
+.pb-text h3 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+.pb-text p { font-size: 14px; color: #aaa; }
+.pb-btn { background: var(--accent); color: #fff; padding: 14px 28px; border-radius: 6px; font-size: 14px; font-weight: 700; white-space: nowrap; flex-shrink: 0; cursor: pointer; }
+
+/* ARTICLES */
+.article-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; }
+.article-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.article-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+.ac-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 60px; }
+.article-card.big .ac-img { height: 200px; font-size: 80px; }
+.ac-img.coral    { background: linear-gradient(135deg,#FF6B6B22,#FF8E5322); }
+.ac-img.mint     { background: linear-gradient(135deg,#4ECDC422,#44CF6C22); }
+.ac-img.lavender { background: linear-gradient(135deg,#A29BFE22,#6C5CE722); }
+.ac-body { padding: 16px; }
+.ac-cat { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.ac-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; line-height: 1.35; margin-bottom: 6px; }
+.article-card.big .ac-title { font-size: 20px; }
+.ac-meta { font-size: 12px; color: var(--ink2); }
+
+/* FOOTER */
+footer { background: var(--ink); color: #666; padding: 40px 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+.footer-logo { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+.footer-logo span { color: var(--accent); }
+footer p { font-size: 13px; line-height: 1.7; }
+.footer-col h4 { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #666; font-size: 13px; text-decoration: none; cursor: pointer; }
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .article-grid { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr 1fr; }
+  nav .nav-links { display: none; }
+  .section { padding: 40px 20px; }
+  .hero-left { padding: 40px 20px; }
+  .promo-banner { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span>🎁 $500 Amazon Gift Card Available</span>
+    <span>🎮 PlayStation 5 Giveaway</span>
+    <span>💰 Earn $50 Cashback Today</span>
+    <span>📱 Free iPhone 15 — Limited Spots</span>
+    <span>✈️ Win a Dream Vacation</span>
+    <span>🛍️ $200 Shopping Voucher</span>
+    <span>🎁 $500 Amazon Gift Card Available</span>
+    <span>🎮 PlayStation 5 Giveaway</span>
+    <span>💰 Earn $50 Cashback Today</span>
+    <span>📱 Free iPhone 15 — Limited Spots</span>
+    <span>✈️ Win a Dream Vacation</span>
+    <span>🛍️ $200 Shopping Voucher</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">Freebies<span>Hub</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Rewards</a></li>
+    <li><a href="#">Giveaways</a></li>
+    <li><a href="#">Cashback</a></li>
+    <li><a href="#">Tools</a></li>
+    <li><a href="#" class="nav-cta">Claim Free Gift →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="tag-chip">🔥 Limited Time Offers</div>
+    <h1>Claim Your<br><em>Free Rewards</em><br>Right Now</h1>
+    <p class="hero-desc">Thousands of free gifts, cashback deals, and exclusive rewards waiting for you. Click anything to get started — it takes less than 60 seconds.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">🎁 Claim Free Gift →</a>
+      <a href="#" class="btn-outline">View All Rewards</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="mini-card"><div class="mc-icon">🛒</div><div class="mc-title">Amazon Voucher</div><div class="mc-sub">$500 gift card for any purchase</div><div class="mc-badge">🔥 Hot</div></div>
+    <div class="mini-card"><div class="mc-icon">🎮</div><div class="mc-title">PlayStation 5</div><div class="mc-sub">Brand new console + 2 games</div><div class="mc-badge">⚡ New</div></div>
+    <div class="mini-card"><div class="mc-icon">💳</div><div class="mc-title">Cashback Card</div><div class="mc-sub">Get $50 back on next purchase</div><div class="mc-badge">✅ Easy</div></div>
+    <div class="mini-card"><div class="mc-icon">✈️</div><div class="mc-title">Vacation Pack</div><div class="mc-sub">7-night stay in Cancun, all-inclusive</div><div class="mc-badge">🌟 Premium</div></div>
+  </div>
+</div>
+
+<!-- REWARDS -->
+<div class="section">
+  <div class="section-head">
+    <h2>🎁 Top Rewards This Week</h2>
+    <a class="see-all">See all →</a>
+  </div>
+  <div class="reward-grid">
+    <div class="reward-card"><div class="rc-img red">🛒</div><div class="rc-body"><div class="rc-title">Amazon Gift Card</div><div class="rc-val">$500 <small>voucher</small></div><div class="rc-stars">★★★★★ <span style="color:#999;font-size:11px">4.9k claimed</span></div></div><span class="rc-lock">🔒 Unlock</span></div>
+    <div class="reward-card"><div class="rc-img green">📱</div><div class="rc-body"><div class="rc-title">iPhone 15 Pro</div><div class="rc-val">FREE <small>giveaway</small></div><div class="rc-stars">★★★★★ <span style="color:#999;font-size:11px">2.1k claimed</span></div></div><span class="rc-lock">🔒 Unlock</span></div>
+    <div class="reward-card"><div class="rc-img blue">🎮</div><div class="rc-body"><div class="rc-title">PlayStation 5</div><div class="rc-val">FREE <small>+ 2 games</small></div><div class="rc-stars">★★★★☆ <span style="color:#999;font-size:11px">876 claimed</span></div></div><span class="rc-lock">🔒 Unlock</span></div>
+    <div class="reward-card"><div class="rc-img yellow">💰</div><div class="rc-body"><div class="rc-title">Cash Reward</div><div class="rc-val">$250 <small>paypal</small></div><div class="rc-stars">★★★★★ <span style="color:#999;font-size:11px">3.2k claimed</span></div></div><span class="rc-lock">🔒 Unlock</span></div>
+    <div class="reward-card"><div class="rc-img purple">✈️</div><div class="rc-body"><div class="rc-title">Free Vacation</div><div class="rc-val">7-Night <small>Cancun</small></div><div class="rc-stars">★★★★★ <span style="color:#999;font-size:11px">450 claimed</span></div></div><span class="rc-lock">🔒 Unlock</span></div>
+    <div class="reward-card"><div class="rc-img teal">🎬</div><div class="rc-body"><div class="rc-title">Netflix 1 Year</div><div class="rc-val">FREE <small>subscription</small></div><div class="rc-stars">★★★★☆ <span style="color:#999;font-size:11px">5.8k claimed</span></div></div><span class="rc-lock">🔒 Unlock</span></div>
+  </div>
+</div>
+
+<!-- TOOLS -->
+<div class="section" style="padding-top:0;border-bottom:none;">
+  <div class="section-head"><h2>⚡ Free Tools & Resources</h2></div>
+  <div class="tools-strip">
+    <div class="tool-pill"><div class="dot"></div>Income Calculator</div>
+    <div class="tool-pill"><div class="dot"></div>Cashback Finder</div>
+    <div class="tool-pill"><div class="dot"></div>Coupon Generator</div>
+    <div class="tool-pill"><div class="dot"></div>Survey Rewards</div>
+    <div class="tool-pill"><div class="dot"></div>Refer & Earn</div>
+    <div class="tool-pill"><div class="dot"></div>Daily Check-In</div>
+    <div class="tool-pill"><div class="dot"></div>Spin & Win</div>
+    <div class="tool-pill"><div class="dot"></div>Scratch Card</div>
+  </div>
+</div>
+
+<!-- PROMO BANNER -->
+<div class="promo-banner">
+  <div class="pb-text">
+    <h3>🚀 Don't Miss Today's Exclusive Drop</h3>
+    <p>Over 1,200 users claimed a reward in the last hour. Your spot is waiting.</p>
+  </div>
+  <div class="pb-btn">Claim Now — It's Free →</div>
+</div>
+
+<!-- ARTICLES -->
+<div class="section">
+  <div class="section-head"><h2>📰 How to Earn More</h2><a class="see-all">Read all →</a></div>
+  <div class="article-grid">
+    <div class="article-card big"><div class="ac-img coral">💡</div><div class="ac-body"><div class="ac-cat">Strategy</div><div class="ac-title">The 5 Fastest Ways to Earn $500 Online This Month Without Any Skills</div><div class="ac-meta">8 min read · 24k views</div></div></div>
+    <div class="article-card"><div class="ac-img mint">📊</div><div class="ac-body"><div class="ac-cat">Guide</div><div class="ac-title">Best Survey Sites That Actually Pay</div><div class="ac-meta">5 min read</div></div></div>
+    <div class="article-card"><div class="ac-img lavender">🎯</div><div class="ac-body"><div class="ac-cat">Tips</div><div class="ac-title">How I Got $1,000 in Gift Cards Last Year for Free</div><div class="ac-meta">6 min read</div></div></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Freebies<span>Hub</span></div>
+    <p>The #1 destination for free rewards, cashback, and exclusive giveaways. Join millions of happy members.</p>
+  </div>
+  <div class="footer-col"><h4>Rewards</h4><ul><li><a href="#">Gift Cards</a></li><li><a href="#">Cashback</a></li><li><a href="#">Giveaways</a></li><li><a href="#">Surveys</a></li></ul></div>
+  <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Blog</a></li><li><a href="#">Press</a></li><li><a href="#">Contact</a></li></ul></div>
+  <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Disclaimer</a></li><li><a href="#">Cookie Policy</a></li></ul></div>
+</footer>
+
+</body>
+</html>
